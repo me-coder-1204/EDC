@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{float}
+
+\title{EDC 3b}
+\author{S A Aravind Eswar}
+
+\begin{document}
+
+\maketitle
+
+\section{MOSFET Analysis}
+
+Performing small signal analysis, we get the following,
+
+$g_m = \frac{i_{out}}{v_{out}}$
+
+$R_o = \frac{v_out}{i_out}$\\
+Let's do a reverse feedback analysis,
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ReverseFeedback.jpg}
+    \caption{Reverse Feedback}
+\end{figure}
+
+The operating point we get is,
+
+$V_GS = 2.1853273V$\\
+Performing a DC sweep about this,
+
+$g_m = 246m\Omega^{-1}$
+
+$r_o = 100\Omega$
+
+$gain \approx -24$\\
+Now, finding it analytically
+
+$g_m = 335m\Omega^{-1}$
+
+$r_o = 100\Omega$
+
+$gain \approx -33$\\
+\section{MOSFET Amplifier}
+
+\subsection{Common Source}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{CommonSource.jpg}
+    \caption{Common Source}
+\end{figure}
+
+In simulation,
+
+$g_m = 0.24\Omega^{-1}$
+
+$r_o = 100\Omega$
+
+$gain \approx 21$\\
+With small signal analysis,
+
+$g_m = 0.275\Omega^{-1}$
+
+$r_o = 100\Omega$
+
+$gain \approx 27.5$\\
+DC operating point about 2V
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{CommonSourcePlot.jpg}
+    \caption{Common Source DC plot}
+\end{figure}
+
+\subsection{Common Drain}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{CommonDrain.jpg}
+    \caption{Common Drain}
+\end{figure}
+
+In simulation,
+
+$g_m = 45.11m\Omega^{-1}$
+
+$gain \approx 0.95$\\
+With small signal analysis,
+
+$g_m = 110m\Omega^{-1}$
+
+$gain = 0.98$\\
+DC operating point about 3V
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{CommonDrainPlot.jpg}
+    \caption{Common Drain DC Plot}
+\end{figure}
+
+\subsection{Common Gate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{CommonGate.jpg}
+    \caption{Common Gate}
+\end{figure}
+
+In simulation,
+
+$g_m = 217m\Omega^{-1}$
+
+$gain = 21$\\
+With small signal analysis,
+
+$g_m = 276m\Omega^{-1}$
+
+$gain = 27.6$\\
+DC operating point about -2V
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{CommonGatePlot.jpg}
+    \caption{Common Gate DC Plot}
+\end{figure}
+
+\end{document}
